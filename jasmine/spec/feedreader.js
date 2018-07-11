@@ -36,7 +36,7 @@ $(function() {
                 expect(allFeeds[i].url).toBeDefined();
                 expect(allFeeds[i].url.length).not.toBe(0);
                 expect(allFeeds[i].url).toMatch('http://');
-            }
+            };
         });
 
         /* TODO: Write a test that loops through each feed
@@ -47,7 +47,7 @@ $(function() {
            for(var i = 0; i < allFeeds.length; i++) {
              expect(allFeeds[i].name).toBeDefined();
              expect(allFeeds[i].name.length).not.toBe(0);
-        }
+        };
       });
     });
 
