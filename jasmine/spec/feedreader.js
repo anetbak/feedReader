@@ -110,7 +110,7 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
 
-          let content;
+        let content;
         let contentNew;
 
          beforeEach(function(done) {
