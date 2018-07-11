@@ -36,7 +36,7 @@ $(function() {
                 expect(allFeeds[i].url).toBeDefined();
                 expect(allFeeds[i].url.length).not.toBe(0);
                 expect(allFeeds[i].url).toMatch('http://');
-            };
+            }
         });
 
         /* TODO: Write a test that loops through each feed
@@ -47,7 +47,7 @@ $(function() {
            for(var i = 0; i < allFeeds.length; i++) {
              expect(allFeeds[i].name).toBeDefined();
              expect(allFeeds[i].name.length).not.toBe(0);
-        };
+        }
       });
     });
 
@@ -110,20 +110,20 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
 
-        let initial;
-        let contentAfter;
+        let content;
+        let contentNew;
 
          beforeEach(function(done) {
             loadFeed(0, function() {
-                initial = $('.feed').html();
+                content = $('.feed').html();
                 done();
             });
         });
 
         it('changes content', function(done) {
             loadFeed(1, function() {
-                contentAfter = $('.feed').html();
-                expect(contentAfter).not.toBe(initial);
+                contentNew = $('.feed').html();
+                expect(contentNew).not.toBe(content);
             done();
             });
 
