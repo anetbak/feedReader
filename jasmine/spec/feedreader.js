@@ -110,20 +110,20 @@ $(function() {
          * Remember, loadFeed() is asynchronous.
          */
 
-        let content;
-        let contentNew;
+        let initial;
+        let contentAfter;
 
          beforeEach(function(done) {
             loadFeed(0, function() {
-                content = $('.feed').html();
+                initial = $('.feed').html();
                 done();
             });
         });
 
         it('changes content', function(done) {
             loadFeed(1, function() {
-                contentNew = $('.feed').html();
-                expect(contentNew).not.toBe(content);
+                contentAfter = $('.feed').html();
+                expect(contentAfter).not.toBe(initial);
             done();
             });
 
