@@ -1,6 +1,6 @@
 
 $(function() {
-   "use strict";
+   //"use strict";
     describe('RSS Feeds', function() {
 
         it('are defined', function() {
