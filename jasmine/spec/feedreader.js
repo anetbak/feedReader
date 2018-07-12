@@ -1,6 +1,6 @@
 
 $(function() {
-   //"use strict";
+   "use strict";
     describe('RSS Feeds', function() {
 
         it('are defined', function() {
@@ -61,6 +61,7 @@ $(function() {
           // make sure there is at lease one entry in the feed
               expect($('.feed').find('.entry').length).toBeGreaterThan(0);
           });
+
         });
 
 // Test that ensures when a new feed is loaded by the loadFeed function that the content actually changes.
@@ -74,11 +75,13 @@ $(function() {
                 initial = $('.feed').html();
                 done();
             });
+
         });
 
         it('changes content', function(done) {
             loadFeed(1, function() {
                 contentAfter = $('.feed').html();
+                //test if after is not equal to intial and if thats true the test passes
                 expect(contentAfter).not.toBe(initial);
             done();
             });
@@ -88,3 +91,4 @@ $(function() {
     });
 
 }());
+
